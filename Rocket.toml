@@ -1,0 +1,12 @@
+[default]
+limits.data-form = "2MiB"
+template_dir = "templates/"
+
+[global.oauth.google]
+provider = "Google"
+client_id = "457765415663-rb2o78f6mnog15vmlnpdofkkbvnjsrdl.apps.googleusercontent.com"
+client_secret = "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"
+redirect_uri = "http://localhost:8000/auth/google"
+
+[global]
+secret_key = "w6YGfVU32oxP1e0lgbXd5ihQNC6X8NuEHQENcN7BFeI="

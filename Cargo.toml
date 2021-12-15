@@ -1,0 +1,23 @@
+[package]
+name = "rust_blog_engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rocket = "0.5.0-rc.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.71"
+rocket_oauth2 = "0.5.0-rc.1"
+rocket_http = "0.5.0-rc.1"
+hyper = "0.14.15"
+hyper-tls = "0.5.0"
+tokio = "1.14.0"
+tera = "1.15.0"
+
+hyper-sync-rustls = "0.3.0-rc.17"
+[dependencies.rocket_dyn_templates]
+version = "0.1.0-rc.1"
+features = ["tera"]
+
+[dependencies.mongodb]
+version = "2.1.0"

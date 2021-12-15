@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Rocket Form Example</title>
+    <link rel="stylesheet" href="/chota.min.css">
+    <style>
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 10px;
+      }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>Login Successful :)</h3>
+
+    <div class="row">
+        <a href="/admin" class="button success">Continue to the app</a>
+    </div>
+</div>
+</body>
+</html>

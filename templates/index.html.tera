@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Rust Blog Engine</title>
+    <link rel="stylesheet" href="/chota.min.css">
+    <style>
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 10px;
+      }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-right">
+        <div class="row">
+            {%- if session.logged_in_user -%}
+                <a href="/admin/new" type="button" class="button primary icon">
+                  New Blog
+                  <img src="https://icongr.am/feather/file.svg?size=16&amp;color=ffffff" alt="icon">
+                </a>
+                <a href="/auth/logout" type="button" class="button secondary">
+                  Logout
+                  <img src="https://icongr.am/feather/log-out.svg?size=16&amp;color=ffffff" alt="icon">
+                </a>
+            {% else %}
+                <a href="/auth/login" type="button" class="button primary">
+                  Login
+                  <img src="https://icongr.am/feather/log-out.svg?size=16&amp;color=ffffff" alt="icon">
+                </a>
+            {%- endif -%}
+       </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Welcome to the Rust Blog Engine 🦀</h1>
+
+    <h3> Blog entries: </h3>
+    {% for blog in data %}
+       <div class="card">
+         <header>
+           <h4>{{blog.title}}</h4>
+         </header>
+         <p>{{blog.content}}</p>
+         <footer class="is-right">
+           <span class="tag is-small">By: {{blog.author}} - last edit: {{blog.last_edit_date}}</span>
+           {%- if session.edit_mode and session.edit_mode == true -%}
+                <span class="tag is-small text-justify"><a class="text-center" href="/admin/edit/{{- blog._id -}}">edit</a></span>
+                <span class="tag is-small text-justify"><a class="text-error" href="/admin/delete/{{- blog._id -}}">delete</a></span>
+           {%- endif -%}
+         </footer>
+       </div>
+        <br/>
+    {% endfor %}
+
+</div>
+</body>
+</html>
