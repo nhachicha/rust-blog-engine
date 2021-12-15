@@ -17,7 +17,7 @@ A demo blog post engine written in Rust, using [Rocket](https://rocket.rs/) and 
 ```
 
 - Add a collection `blogs` which will persist our blog posts entries.
-  <img src="./images/MongoDB_Collections.png" width="400">
+  <img src="./images/MongoDB_Collections.png" width="800">
 
 
 - Setup a Google OAuth2 API and add the `client_id` and `client_secret` inside the [Rocket.toml](/Rocket.toml) file.
@@ -30,16 +30,16 @@ MDB_URL="mongodb+srv://<user>:<password>@XXXX.mongodb.net/myFirstDatabase?retryW
 # Preview
 
 ### Home
-<img src="./images/Home.png" width="400">
+<img src="./images/Home.png" width="800">
 
 ### Login
-<img src="./images/OAuth_login.png" width="400">
+<img src="./images/OAuth_login.png" width="800">
 
 ### Admin
-<img src="./images/Admin_home.png" width="400">
+<img src="./images/Admin_home.png" width="800">
 
 ### New Blog
-<img src="./images/New_Blog_Validation.png" width="400">
+<img src="./images/New_Blog_Validation.png" width="800">
 
 ### Edit Blog
-<img src="./images/Edit_Blog.png" width="400">
+<img src="./images/Edit_Blog.png" width="800">
